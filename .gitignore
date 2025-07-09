@@ -1,0 +1,22 @@
+# PyCharm
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenv
+venv/
+env/
+.venv/
+
+# Distribution / packaging
+.eggs/
+*.egg-info/
+dist/
+build/
+
+nana_2/core/log/*.log
+nana_2.bat

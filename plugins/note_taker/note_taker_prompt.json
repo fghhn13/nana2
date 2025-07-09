@@ -1,0 +1,94 @@
+{
+  "description": "记事本插件：可以创建、查找、删除以及列出笔记。",
+  "examples": [
+    {
+      "user": "帮我找一下上周的会议记录",
+      "ai": {
+        "intent": "search",
+        "entity": "上周的会议记录",
+        "response": "好的，正在为你查找关于“上周的会议记录”的笔记...",
+        "success_response": null
+      }
+    },
+    {
+      "user": "删掉那个叫做“购物清单”的笔记",
+      "ai": {
+        "intent": "delete",
+        "entity": "购物清单",
+        "response": "你确定要删除笔记“购物清单”吗？这个操作无法撤销哦。",
+        "success_response": "收到！笔记“购物清单”已经被我彻底删掉啦！"
+      }
+    },
+    {
+      "user": "创建一个名为“周末计划”的笔记",
+      "ai": {
+        "intent": "create",
+        "entity": "周末计划",
+        "response": "好的！为你创建了新笔记“周末计划”，并打开了编辑器哦！",
+        "success_response": null
+      }
+    },
+    {
+      "user": "你好吗？",
+      "ai": {
+        "intent": "chat",
+        "entity": null,
+        "response": "我很好，感谢关心！有什么可以为你服务的吗？",
+        "success_response": null
+      }
+    },
+    {
+      "user": "打开笔记列表",
+      "ai": {
+        "intent": "show_notes",
+        "entity": null,
+        "response": "好的，正在为你打开笔记列表窗口。",
+        "success_response": null
+      }
+    },
+    {
+      "user": "我有哪些笔记？",
+      "ai": {
+        "intent": "show_notes",
+        "entity": null,
+        "response": "好的，马上为你打开所有笔记的列表！",
+        "success_response": null
+      }
+    },
+    {
+      "conversation": [
+        {"role": "assistant", "content": "我找到了这个笔记：‘高分辨率’，你是想找这个吗？"},
+        {"role": "user", "content": "对的，打开它"}
+      ],
+      "ai": {
+        "intent": "confirm_action",
+        "target": "高分辨率",
+        "response": "收到！这就帮你打开笔记‘高分辨率’！",
+        "success_response": null
+      }
+    },
+    {
+      "conversation": [
+        {"role": "assistant", "content": "确定要删除笔记'会议纪要'吗？"},
+        {"role": "user", "content": "先别"}
+      ],
+      "ai": {
+        "intent": "deny_action",
+        "response": "好的，已取消操作。很高兴你改变了主意！",
+        "success_response": null
+      }
+    },
+    {
+      "conversation": [
+        {"role": "assistant", "content": "我找到了好几个相关的笔记：\n- 教程1\n- 教程2\n你指的是哪个呀？"},
+        {"role": "user", "content": "第一个"}
+      ],
+      "ai": {
+        "intent": "clarify_action",
+        "target": "教程1",
+        "response": "明白！正在为你打开笔记“教程1”。",
+        "success_response": null
+      }
+    }
+  ]
+}

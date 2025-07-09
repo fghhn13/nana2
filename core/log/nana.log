@@ -1,0 +1,528 @@
+2025-07-03 16:42:04,721 - nana_logger - [INFO] - main_detector.__init__:21 - [检测器] 意图检测器已初始化。
+2025-07-03 16:42:04,721 - nana_logger - [INFO] - cmd_main._load_plugins:29 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-03 16:42:04,723 - nana_logger - [INFO] - cmd_main._load_plugins:41 -   - 成功加载插件: 'test_plugin'
+2025-07-03 16:42:07,426 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 111
+2025-07-03 16:42:07,428 - nana_logger - [INFO] - main_detector.detect_and_parse:31 - [检测器] 开始检测用户意图...
+2025-07-03 16:42:07,428 - nana_logger - [INFO] - ai_service.recognize_command:59 - [AI服务] 收到对话历史，准备调用AI模型...
+2025-07-03 16:42:07,429 - nana_logger - [INFO] - ai_service.recognize_command:72 - [AI服务] 测试模式：返回一个专门用于测试的指令。
+2025-07-03 16:42:07,429 - nana_logger - [INFO] - main_detector.detect_and_parse:35 - [检测器] 从AI服务收到原始指令: {'plugin': 'test_plugin', 'command': 'echo', 'args': {'text_from_user': '111'}, 'response': '（模拟AI对话）收到，正在派发测试任务...'}
+2025-07-03 16:42:07,429 - nana_logger - [INFO] - main_detector.detect_and_parse:40 - [检测器] 经过解析器处理后的干净指令: {'plugin': 'test_plugin', 'command': 'echo', 'args': {'text_from_user': '111'}, 'response': '（模拟AI对话）收到，正在派发测试任务...'}
+2025-07-03 16:42:07,429 - nana_logger - [INFO] - main_detector.detect_and_parse:45 - [检测器] 意图检测流程完成。
+2025-07-03 16:42:07,429 - nana_logger - [INFO] - cmd_main.execute_command:56 - [执行器] 收到指令，需要插件 'test_plugin' 来执行。
+2025-07-03 16:42:08,993 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 222
+2025-07-03 16:42:08,994 - nana_logger - [INFO] - main_detector.detect_and_parse:31 - [检测器] 开始检测用户意图...
+2025-07-03 16:42:08,994 - nana_logger - [INFO] - ai_service.recognize_command:59 - [AI服务] 收到对话历史，准备调用AI模型...
+2025-07-03 16:42:08,995 - nana_logger - [INFO] - ai_service.recognize_command:72 - [AI服务] 测试模式：返回一个专门用于测试的指令。
+2025-07-03 16:42:08,995 - nana_logger - [INFO] - main_detector.detect_and_parse:35 - [检测器] 从AI服务收到原始指令: {'plugin': 'test_plugin', 'command': 'echo', 'args': {'text_from_user': '222'}, 'response': '（模拟AI对话）收到，正在派发测试任务...'}
+2025-07-03 16:42:08,995 - nana_logger - [INFO] - main_detector.detect_and_parse:40 - [检测器] 经过解析器处理后的干净指令: {'plugin': 'test_plugin', 'command': 'echo', 'args': {'text_from_user': '222'}, 'response': '（模拟AI对话）收到，正在派发测试任务...'}
+2025-07-03 16:42:08,996 - nana_logger - [INFO] - main_detector.detect_and_parse:45 - [检测器] 意图检测流程完成。
+2025-07-03 16:42:08,996 - nana_logger - [INFO] - cmd_main.execute_command:56 - [执行器] 收到指令，需要插件 'test_plugin' 来执行。
+2025-07-03 16:42:12,865 - nana_logger - [INFO] - main.on_app_exit:75 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-04 18:02:49,232 - nana_logger - [INFO] - cmd_main._load_plugins:29 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-04 18:02:49,238 - nana_logger - [INFO] - cmd_main._load_plugins:41 -   - 成功加载插件: 'test_plugin'
+2025-07-04 18:04:54,701 - nana_logger - [INFO] - cmd_main._load_plugins:29 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-04 18:04:54,703 - nana_logger - [INFO] - cmd_main._load_plugins:41 -   - 成功加载插件: 'test_plugin'
+2025-07-04 18:04:55,240 - nana_logger - [ERROR] - ai_service._load_main_prompts:36 - [AI服务] 加载“主教科书”失败: [Errno 2] No such file or directory: 'F:\\fghn的各种文件\\有关于自制\\自制py程序\\nana_2\\IntentDetector\\ai_service\\prompts.json'
+2025-07-04 18:04:55,241 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-04 18:05:02,522 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 111、
+2025-07-04 18:05:02,523 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-04 18:05:02,523 - nana_logger - [WARNING] - ai_service.recognize_command:68 - [AI服务] AI客户端未初始化或主prompts未加载，返回默认指令。
+2025-07-04 18:05:02,525 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '嗯...我好像没太听懂你的意思。'}
+2025-07-04 18:05:02,525 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-04 18:05:02,526 - nana_logger - [INFO] - cmd_main.execute_command:61 - [执行器] 收到无需执行的指令。
+2025-07-04 18:05:11,086 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 你是谁
+2025-07-04 18:05:11,087 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-04 18:05:11,088 - nana_logger - [WARNING] - ai_service.recognize_command:68 - [AI服务] AI客户端未初始化或主prompts未加载，返回默认指令。
+2025-07-04 18:05:11,088 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '嗯...我好像没太听懂你的意思。'}
+2025-07-04 18:05:11,089 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-04 18:05:11,089 - nana_logger - [INFO] - cmd_main.execute_command:61 - [执行器] 收到无需执行的指令。
+2025-07-04 18:05:25,316 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: ？
+2025-07-04 18:05:25,317 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-04 18:05:25,317 - nana_logger - [WARNING] - ai_service.recognize_command:68 - [AI服务] AI客户端未初始化或主prompts未加载，返回默认指令。
+2025-07-04 18:05:25,318 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '嗯...我好像没太听懂你的意思。'}
+2025-07-04 18:05:25,318 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-04 18:05:25,318 - nana_logger - [INFO] - cmd_main.execute_command:61 - [执行器] 收到无需执行的指令。
+2025-07-04 18:05:27,689 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-07 09:22:02,470 - nana_logger - [INFO] - cmd_main._load_plugins:29 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-07 09:22:02,479 - nana_logger - [INFO] - cmd_main._load_plugins:41 -   - 成功加载插件: 'test_plugin'
+2025-07-07 09:22:03,112 - nana_logger - [ERROR] - ai_service._load_main_prompts:36 - [AI服务] 加载“主教科书”失败: [Errno 2] No such file or directory: 'F:\\fghn的各种文件\\有关于自制\\自制py程序\\nana_2\\IntentDetector\\ai_service\\prompts.json'
+2025-07-07 09:22:03,112 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-07 09:22:10,623 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 你好
+2025-07-07 09:22:10,624 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-07 09:22:10,625 - nana_logger - [WARNING] - ai_service.recognize_command:68 - [AI服务] AI客户端未初始化或主prompts未加载，返回默认指令。
+2025-07-07 09:22:10,626 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '嗯...我好像没太听懂你的意思。'}
+2025-07-07 09:22:10,627 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-07 09:22:10,627 - nana_logger - [INFO] - cmd_main.execute_command:61 - [执行器] 收到无需执行的指令。
+2025-07-07 09:28:39,149 - nana_logger - [INFO] - cmd_main._load_plugins:29 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-07 09:28:39,153 - nana_logger - [INFO] - cmd_main._load_plugins:41 -   - 成功加载插件: 'test_plugin'
+2025-07-07 09:28:39,717 - nana_logger - [INFO] - ai_service._load_main_prompts:34 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-07 09:28:39,718 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-07 09:28:46,576 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 你好
+2025-07-07 09:28:46,577 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-07 09:28:46,578 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:45 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-07 09:28:46,579 - nana_logger - [INFO] - ai_service.recognize_command:84 - [AI服务] 准备调用AI模型...
+2025-07-07 09:28:49,622 - nana_logger - [INFO] - ai_service.recognize_command:93 - [AI服务] AI模型返回原始结果: {"plugin": null, "command": null, "args": null, "response": "你好呀！有什么我可以帮你的吗？"}
+2025-07-07 09:28:49,624 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '你好呀！有什么我可以帮你的吗？'}
+2025-07-07 09:28:49,624 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-07 09:28:49,625 - nana_logger - [INFO] - cmd_main.execute_command:61 - [执行器] 收到无需执行的指令。
+2025-07-07 09:28:54,066 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 你是谁
+2025-07-07 09:28:54,067 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-07 09:28:54,067 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:45 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-07 09:28:54,068 - nana_logger - [INFO] - ai_service.recognize_command:84 - [AI服务] 准备调用AI模型...
+2025-07-07 09:28:56,088 - nana_logger - [INFO] - ai_service.recognize_command:93 - [AI服务] AI模型返回原始结果: {"plugin": null, "command": null, "args": null, "response": "我是Nana酱，一个可爱的AI助手！"}
+2025-07-07 09:28:56,088 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '我是Nana酱，一个可爱的AI助手！'}
+2025-07-07 09:28:56,089 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-07 09:28:56,089 - nana_logger - [INFO] - cmd_main.execute_command:61 - [执行器] 收到无需执行的指令。
+2025-07-07 09:28:59,246 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-07 14:29:25,154 - nana_logger - [INFO] - cmd_main._load_plugins:34 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-07 14:29:25,163 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'color_picker'
+2025-07-07 14:29:25,169 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'sample_plugin'
+2025-07-07 14:29:25,169 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'test_plugin'
+2025-07-07 14:29:25,846 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-07 14:29:25,846 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-07 14:29:45,335 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 帮我打开取色器
+2025-07-07 14:29:45,336 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-07 14:29:45,338 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-07 14:29:45,338 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-07 14:29:45,339 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-07 14:29:45,340 - nana_logger - [INFO] - ai_service.recognize_command:88 - [AI服务] 准备调用AI模型...
+2025-07-07 14:29:51,102 - nana_logger - [INFO] - ai_service.recognize_command:97 - [AI服务] AI模型返回原始结果: {"plugin": "color_picker", "command": "open_color_picker", "args": {}, "response": "正在为你打开取色器工具。"}
+2025-07-07 14:29:51,102 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'color_picker', 'command': 'open_color_picker', 'args': {}, 'response': '正在为你打开取色器工具。'}
+2025-07-07 14:29:51,103 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-07 14:29:51,103 - nana_logger - [INFO] - cmd_main.execute_command:69 - [执行器] 收到指令，需要插件 'color_picker' 来执行。
+2025-07-07 14:29:51,103 - nana_logger - [INFO] - cmd_main.execute_command:75 - [执行器] 调用插件 'color_picker' 执行命令 'open_color_picker'，参数: {}
+2025-07-07 14:30:03,829 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-07 14:38:46,189 - nana_logger - [INFO] - cmd_main._load_plugins:34 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-07 14:38:46,191 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'color_picker'
+2025-07-07 14:38:46,192 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'sample_plugin'
+2025-07-07 14:38:46,194 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'test_plugin'
+2025-07-07 14:38:46,731 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-07 14:38:46,731 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-07 14:38:48,154 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-07 14:58:20,767 - nana_logger - [INFO] - cmd_main._load_plugins:34 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-07 14:58:20,771 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'color_picker'
+2025-07-07 14:58:20,771 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'sample_plugin'
+2025-07-07 14:58:20,771 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'test_plugin'
+2025-07-07 14:58:21,302 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-07 14:58:21,302 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-07 15:01:28,632 - nana_logger - [INFO] - cmd_main._load_plugins:34 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-07 15:01:28,638 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'color_picker'
+2025-07-07 15:01:28,641 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'sample_plugin'
+2025-07-07 15:01:28,644 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'test_plugin'
+2025-07-07 15:01:28,642 - nana_logger - [INFO] - cmd_main._load_plugins:34 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-07 15:01:28,654 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'color_picker'
+2025-07-07 15:01:28,658 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'sample_plugin'
+2025-07-07 15:01:28,665 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'test_plugin'
+2025-07-07 15:01:31,746 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-07 15:01:31,749 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-07 15:01:31,928 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-07 15:01:31,929 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-07 15:01:33,868 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-07 15:01:35,307 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-07 15:01:44,127 - nana_logger - [INFO] - cmd_main._load_plugins:34 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-07 15:01:44,129 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'color_picker'
+2025-07-07 15:01:44,129 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'sample_plugin'
+2025-07-07 15:01:44,131 - nana_logger - [INFO] - cmd_main._load_plugins:46 -   - 成功加载插件: 'test_plugin'
+2025-07-07 15:01:44,689 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-07 15:01:44,689 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-07 15:01:54,157 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-08 14:44:16,207 - nana_logger - [INFO] - cmd_main._load_plugins:36 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-08 14:44:16,208 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'color_picker'
+2025-07-08 14:44:16,210 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'note_taker'
+2025-07-08 14:44:16,211 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'sample_plugin'
+2025-07-08 14:44:16,211 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'test_plugin'
+2025-07-08 14:44:16,709 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-08 14:44:16,710 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-08 14:44:32,726 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 帮我创建“学习计划”笔记
+2025-07-08 14:44:32,727 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 14:44:32,727 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 14:44:32,727 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 14:44:32,728 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 14:44:32,728 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 14:44:32,728 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 14:44:35,756 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "create", "entity": "学习计划", "response": "好的！为你创建了新笔记“学习计划”，并打开了编辑器哦！", "success_response": null}
+2025-07-08 14:44:35,756 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'create_note', 'args': {'title': '学习计划'}, 'response': '好的！为你创建了新笔记“学习计划”，并打开了编辑器哦！'}
+2025-07-08 14:44:35,756 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 14:44:35,756 - nana_logger - [INFO] - cmd_main.execute_command:83 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 14:44:35,756 - nana_logger - [INFO] - cmd_main.execute_command:89 - [执行器] 调用插件 'note_taker' 执行命令 'create_note'，参数: {'title': '学习计划'}
+2025-07-08 14:45:01,069 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 帮我删除学习计划的笔记
+2025-07-08 14:45:01,069 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 14:45:01,070 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 14:45:01,070 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 14:45:01,070 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 14:45:01,071 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 14:45:01,071 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 14:45:05,910 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "delete", "entity": "学习计划", "response": "你确定要删除笔记“学习计划”吗？这个操作无法撤销哦。", "success_response": "收到！笔记“学习计划”已经被我彻底删掉啦！"}
+2025-07-08 14:45:05,911 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'delete_note', 'args': {'title': '学习计划'}, 'response': '你确定要删除笔记“学习计划”吗？这个操作无法撤销哦。'}
+2025-07-08 14:45:05,913 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 14:45:05,913 - nana_logger - [INFO] - cmd_main.execute_command:83 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 14:45:05,913 - nana_logger - [INFO] - cmd_main.execute_command:89 - [执行器] 调用插件 'note_taker' 执行命令 'delete_note'，参数: {'title': '学习计划'}
+2025-07-08 14:45:20,935 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-08 15:48:54,987 - nana_logger - [INFO] - cmd_main._load_plugins:36 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-08 15:48:54,989 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'color_picker'
+2025-07-08 15:48:54,994 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'note_taker'
+2025-07-08 15:48:54,995 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'sample_plugin'
+2025-07-08 15:48:54,995 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'test_plugin'
+2025-07-08 15:48:55,484 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-08 15:48:55,486 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-08 15:49:17,733 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我想创建一个笔记
+2025-07-08 15:49:17,733 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:49:17,733 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:49:17,733 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:49:17,733 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:49:17,733 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:49:17,733 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:49:20,947 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "create_note", "response": "好的！请告诉我这个笔记的名字，我好帮你创建哦！", "success_response": null}
+2025-07-08 15:49:20,948 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'intent': 'create_note', 'response': '好的！请告诉我这个笔记的名字，我好帮你创建哦！', 'success_response': None}
+2025-07-08 15:49:20,948 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:49:20,948 - nana_logger - [INFO] - cmd_main.execute_command:80 - [执行器] 收到无需执行的指令。
+2025-07-08 15:49:29,708 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 学习计划
+2025-07-08 15:49:29,709 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:49:29,709 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:49:29,710 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:49:29,710 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:49:29,710 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:49:29,711 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:49:32,961 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "create", "entity": "学习计划", "response": "好的！为你创建了新笔记“学习计划”，并打开了编辑器哦！", "success_response": null}
+2025-07-08 15:49:32,961 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'create_note', 'args': {'title': '学习计划'}, 'response': '好的！为你创建了新笔记“学习计划”，并打开了编辑器哦！'}
+2025-07-08 15:49:32,961 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:49:32,961 - nana_logger - [INFO] - cmd_main.execute_command:83 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 15:49:32,961 - nana_logger - [INFO] - cmd_main.execute_command:89 - [执行器] 调用插件 'note_taker' 执行命令 'create_note'，参数: {'title': '学习计划'}
+2025-07-08 15:49:53,553 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我想删除这个笔记
+2025-07-08 15:49:53,553 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:49:53,553 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:49:53,553 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:49:53,553 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:49:53,559 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:49:53,559 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:49:56,470 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "delete", "entity": "学习计划", "response": "你确定要删除笔记“学习计划”吗？这个操作无法撤销哦。", "success_response": "收到！笔记“学习计划”已经被我彻底删掉啦！"}
+2025-07-08 15:49:56,471 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'delete_note', 'args': {'title': '学习计划'}, 'response': '你确定要删除笔记“学习计划”吗？这个操作无法撤销哦。'}
+2025-07-08 15:49:56,471 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:49:56,471 - nana_logger - [INFO] - cmd_main.execute_command:83 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 15:49:56,471 - nana_logger - [INFO] - cmd_main.execute_command:89 - [执行器] 调用插件 'note_taker' 执行命令 'delete_note'，参数: {'title': '学习计划'}
+2025-07-08 15:50:22,665 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 今天天气怎么样
+2025-07-08 15:50:22,667 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:50:22,667 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:50:22,668 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:50:22,668 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:50:22,669 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:50:22,669 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:50:25,263 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "chat", "entity": null, "response": "今天的天气信息我暂时无法获取呢。你可以查看天气应用查看实时情况哦！", "success_response": null}
+2025-07-08 15:50:25,263 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'intent': 'chat', 'entity': None, 'response': '今天的天气信息我暂时无法获取呢。你可以查看天气应用查看实时情况哦！', 'success_response': None}
+2025-07-08 15:50:25,263 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:50:25,263 - nana_logger - [INFO] - cmd_main.execute_command:80 - [执行器] 收到无需执行的指令。
+2025-07-08 15:50:35,683 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-08 15:52:03,527 - nana_logger - [INFO] - cmd_main._load_plugins:36 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-08 15:52:03,529 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'color_picker'
+2025-07-08 15:52:03,529 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'note_taker'
+2025-07-08 15:52:03,529 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'sample_plugin'
+2025-07-08 15:52:03,529 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'test_plugin'
+2025-07-08 15:52:04,023 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-08 15:52:04,024 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-08 15:52:10,445 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我现在有哪些笔记
+2025-07-08 15:52:10,447 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:52:10,447 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:52:10,447 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:52:10,448 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:52:10,448 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:52:10,448 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:52:13,005 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "show_notes", "entity": null, "response": "好的，正在为你展示所有的笔记列表！", "success_response": null}
+2025-07-08 15:52:13,006 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'list_notes', 'args': None, 'response': '好的，正在为你展示所有的笔记列表！'}
+2025-07-08 15:52:13,006 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:52:13,006 - nana_logger - [INFO] - cmd_main.execute_command:83 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 15:52:13,006 - nana_logger - [INFO] - cmd_main.execute_command:89 - [执行器] 调用插件 'note_taker' 执行命令 'list_notes'，参数: None
+2025-07-08 15:52:37,801 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 创建一个学习计划的笔记
+2025-07-08 15:52:37,801 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:52:37,801 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:52:37,803 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:52:37,803 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:52:37,803 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:52:37,804 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:52:40,345 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "create", "entity": "学习计划", "response": "好的！为你创建了新笔记“学习计划”，并打开了编辑器哦！", "success_response": null}
+2025-07-08 15:52:40,346 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'create_note', 'args': {'title': '学习计划'}, 'response': '好的！为你创建了新笔记“学习计划”，并打开了编辑器哦！'}
+2025-07-08 15:52:40,346 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:52:40,346 - nana_logger - [INFO] - cmd_main.execute_command:83 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 15:52:40,346 - nana_logger - [INFO] - cmd_main.execute_command:89 - [执行器] 调用插件 'note_taker' 执行命令 'create_note'，参数: {'title': '学习计划'}
+2025-07-08 15:53:15,881 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 创建一个”学习目标“笔记
+2025-07-08 15:53:15,881 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:53:15,883 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:53:15,883 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:53:15,883 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:53:15,884 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:53:15,884 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:53:18,609 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "create", "entity": "学习目标", "response": "好的！为你创建了新笔记“学习目标”，并打开了编辑器哦！", "success_response": null}
+2025-07-08 15:53:18,610 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'create_note', 'args': {'title': '学习目标'}, 'response': '好的！为你创建了新笔记“学习目标”，并打开了编辑器哦！'}
+2025-07-08 15:53:18,610 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:53:18,610 - nana_logger - [INFO] - cmd_main.execute_command:83 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 15:53:18,610 - nana_logger - [INFO] - cmd_main.execute_command:89 - [执行器] 调用插件 'note_taker' 执行命令 'create_note'，参数: {'title': '学习目标'}
+2025-07-08 15:53:27,418 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我现在有哪些笔记
+2025-07-08 15:53:27,419 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:53:27,419 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:53:27,419 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:53:27,420 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:53:27,420 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:53:27,420 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:53:29,973 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "show_notes", "entity": null, "response": "好的，马上为你打开所有笔记的列表！", "success_response": null}
+2025-07-08 15:53:29,974 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'list_notes', 'args': None, 'response': '好的，马上为你打开所有笔记的列表！'}
+2025-07-08 15:53:29,974 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:53:29,974 - nana_logger - [INFO] - cmd_main.execute_command:83 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 15:53:29,975 - nana_logger - [INFO] - cmd_main.execute_command:89 - [执行器] 调用插件 'note_taker' 执行命令 'list_notes'，参数: None
+2025-07-08 15:53:59,094 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 有关于学习的有哪些笔记
+2025-07-08 15:53:59,095 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 15:53:59,095 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 15:53:59,096 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 15:53:59,096 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 15:53:59,096 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 15:53:59,096 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 15:54:01,845 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "search_notes", "keyword": "学习", "response": "正在为你查找包含‘学习’的笔记...", "success_response": null}
+2025-07-08 15:54:01,847 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'intent': 'search_notes', 'keyword': '学习', 'response': '正在为你查找包含‘学习’的笔记...', 'success_response': None}
+2025-07-08 15:54:01,847 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 15:54:01,847 - nana_logger - [INFO] - cmd_main.execute_command:80 - [执行器] 收到无需执行的指令。
+2025-07-08 15:54:17,855 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-08 16:20:10,859 - nana_logger - [INFO] - cmd_main._load_plugins:36 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-08 16:20:10,860 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'color_picker'
+2025-07-08 16:20:10,861 - nana_logger - [INFO] - cmd_main._load_plugins:62 -   - 加载插件 note_taker 失败: unindent does not match any outer indentation level (__init__.py, line 80)
+2025-07-08 16:20:10,862 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'sample_plugin'
+2025-07-08 16:20:10,862 - nana_logger - [INFO] - cmd_main._load_plugins:60 -   - 成功加载插件: 'test_plugin'
+2025-07-08 16:20:11,341 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-08 16:20:11,341 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-08 16:20:20,060 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我现在有哪些笔记
+2025-07-08 16:20:20,061 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:20:20,061 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:20:20,061 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:20:20,062 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:20:20,062 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:20:22,967 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"plugin": null, "command": null, "args": null, "response": "这个我暂时不清楚呢，你可以告诉我你记了些什么内容，我可以帮你整理哦。"}
+2025-07-08 16:20:22,968 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '这个我暂时不清楚呢，你可以告诉我你记了些什么内容，我可以帮你整理哦。'}
+2025-07-08 16:20:22,969 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:20:22,969 - nana_logger - [INFO] - cmd_main.execute_command:80 - [执行器] 收到无需执行的指令。
+2025-07-08 16:20:43,542 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我有什么笔记
+2025-07-08 16:20:43,542 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:20:43,543 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:20:43,543 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:20:43,544 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:20:43,544 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:20:46,271 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"plugin": null, "command": null, "args": null, "response": "我暂时无法查看你的笔记内容呢。你可以告诉我你记录了什么，我可以帮你整理和提醒哦！"}
+2025-07-08 16:20:46,271 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '我暂时无法查看你的笔记内容呢。你可以告诉我你记录了什么，我可以帮你整理和提醒哦！'}
+2025-07-08 16:20:46,272 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:20:46,272 - nana_logger - [INFO] - cmd_main.execute_command:80 - [执行器] 收到无需执行的指令。
+2025-07-08 16:21:01,062 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 有关于学习的有什么笔记
+2025-07-08 16:21:01,063 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:21:01,063 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:21:01,064 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:21:01,065 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:21:01,065 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:21:03,980 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"plugin": null, "command": null, "args": null, "response": "我暂时无法查看你具体的笔记内容呢。你可以告诉我关于学习的笔记有哪些，我可以帮你整理和归纳哦！"}
+2025-07-08 16:21:03,980 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': None, 'command': None, 'args': None, 'response': '我暂时无法查看你具体的笔记内容呢。你可以告诉我关于学习的笔记有哪些，我可以帮你整理和归纳哦！'}
+2025-07-08 16:21:03,980 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:21:03,980 - nana_logger - [INFO] - cmd_main.execute_command:80 - [执行器] 收到无需执行的指令。
+2025-07-08 16:21:07,874 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-08 16:32:40,468 - nana_logger - [INFO] - cmd_main._load_plugins:36 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-08 16:32:40,469 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'color_picker'
+2025-07-08 16:32:40,473 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'note_taker'
+2025-07-08 16:32:40,474 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'sample_plugin'
+2025-07-08 16:32:40,474 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'test_plugin'
+2025-07-08 16:32:40,964 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-08 16:32:40,965 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-08 16:33:32,167 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我现在有哪些笔记
+2025-07-08 16:33:32,167 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:33:32,168 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:33:32,168 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:33:32,169 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 16:33:32,169 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:33:32,169 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:33:38,376 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "show_notes", "entity": null, "response": "好的，马上为你展示所有笔记的列表！", "success_response": null}
+2025-07-08 16:33:38,376 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'list_notes', 'args': None, 'response': '好的，马上为你展示所有笔记的列表！'}
+2025-07-08 16:33:38,377 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:33:38,377 - nana_logger - [INFO] - cmd_main.execute_command:84 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 16:33:38,377 - nana_logger - [INFO] - cmd_main.execute_command:90 - [执行器] 调用插件 'note_taker' 执行命令 'list_notes'，参数: None
+2025-07-08 16:34:05,101 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 有关于学习的有哪些笔记
+2025-07-08 16:34:05,102 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:34:05,102 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:34:05,102 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:34:05,103 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 16:34:05,103 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:34:05,103 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:34:07,591 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "search_notes", "entity": "学习", "response": "正在为你查找与“学习”相关的笔记...", "success_response": null}
+2025-07-08 16:34:07,591 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'search_notes', 'args': {'title': '学习'}, 'response': '正在为你查找与“学习”相关的笔记...'}
+2025-07-08 16:34:07,591 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:34:07,591 - nana_logger - [INFO] - cmd_main.execute_command:84 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 16:34:07,591 - nana_logger - [INFO] - cmd_main.execute_command:90 - [执行器] 调用插件 'note_taker' 执行命令 'search_notes'，参数: {'title': '学习'}
+2025-07-08 16:34:35,877 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: ？
+2025-07-08 16:34:35,878 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:34:35,878 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:34:35,879 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:34:35,879 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 16:34:35,879 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:34:35,879 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:34:38,471 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "chat", "entity": null, "response": "抱歉，我不太明白你的意思。你能再解释得清楚一些吗？", "success_response": null}
+2025-07-08 16:34:38,471 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'intent': 'chat', 'entity': None, 'response': '抱歉，我不太明白你的意思。你能再解释得清楚一些吗？', 'success_response': None}
+2025-07-08 16:34:38,471 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:34:38,471 - nana_logger - [INFO] - cmd_main.execute_command:81 - [执行器] 收到无需执行的指令。
+2025-07-08 16:34:45,874 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-08 16:35:01,817 - nana_logger - [INFO] - cmd_main._load_plugins:36 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-08 16:35:01,817 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'color_picker'
+2025-07-08 16:35:01,820 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'note_taker'
+2025-07-08 16:35:01,820 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'sample_plugin'
+2025-07-08 16:35:01,821 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'test_plugin'
+2025-07-08 16:35:02,295 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-08 16:35:02,295 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-08 16:35:33,436 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 帮我创建一个”学习动力“笔记
+2025-07-08 16:35:33,437 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:35:33,437 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:35:33,439 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:35:33,439 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 16:35:33,440 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:35:33,440 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:35:36,243 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "create", "entity": "学习动力", "response": "好的！为你创建了新笔记“学习动力”，并打开了编辑器哦！", "success_response": null}
+2025-07-08 16:35:36,243 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'create_note', 'args': {'title': '学习动力'}, 'response': '好的！为你创建了新笔记“学习动力”，并打开了编辑器哦！'}
+2025-07-08 16:35:36,243 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:35:36,243 - nana_logger - [INFO] - cmd_main.execute_command:84 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 16:35:36,243 - nana_logger - [INFO] - cmd_main.execute_command:90 - [执行器] 调用插件 'note_taker' 执行命令 'create_note'，参数: {'title': '学习动力'}
+2025-07-08 16:36:05,753 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 有关于学习的有哪些笔记
+2025-07-08 16:36:05,754 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:36:05,755 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:36:05,755 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:36:05,756 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 16:36:05,756 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:36:05,756 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:36:08,590 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "search_notes", "keyword": "学习", "response": "正在为你查找与“学习”相关的笔记...", "success_response": null}
+2025-07-08 16:36:08,590 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'search_notes', 'args': None, 'response': '正在为你查找与“学习”相关的笔记...'}
+2025-07-08 16:36:08,591 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:36:08,591 - nana_logger - [INFO] - cmd_main.execute_command:84 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 16:36:08,591 - nana_logger - [INFO] - cmd_main.execute_command:90 - [执行器] 调用插件 'note_taker' 执行命令 'search_notes'，参数: None
+2025-07-08 16:36:16,167 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-08 16:57:59,665 - nana_logger - [INFO] - cmd_main._load_plugins:36 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-08 16:57:59,667 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'color_picker'
+2025-07-08 16:57:59,669 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'note_taker'
+2025-07-08 16:57:59,670 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'sample_plugin'
+2025-07-08 16:57:59,670 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'test_plugin'
+2025-07-08 16:58:00,171 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-08 16:58:00,171 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-08 16:58:10,334 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我有哪些笔记？
+2025-07-08 16:58:10,335 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:58:10,335 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:58:10,336 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:58:10,336 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 16:58:10,337 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:58:10,337 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:58:13,048 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "show_notes", "entity": null, "response": "好的，马上为你打开所有笔记的列表！", "success_response": null}
+2025-07-08 16:58:13,049 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'list_notes', 'args': None, 'response': '好的，马上为你打开所有笔记的列表！'}
+2025-07-08 16:58:13,049 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:58:13,050 - nana_logger - [INFO] - cmd_main.execute_command:84 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-08 16:58:13,050 - nana_logger - [INFO] - cmd_main.execute_command:90 - [执行器] 调用插件 'note_taker' 执行命令 'list_notes'，参数: None
+2025-07-08 16:58:27,710 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 有关于学习的有哪些笔记？
+2025-07-08 16:58:27,711 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-08 16:58:27,711 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-08 16:58:27,712 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-08 16:58:27,712 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-08 16:58:27,712 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-08 16:58:27,713 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-08 16:58:30,745 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "search_notes_by_keyword", "keyword": "学习", "response": "正在查找所有与“学习”相关的笔记...", "success_response": null}
+2025-07-08 16:58:30,745 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'intent': 'search_notes_by_keyword', 'keyword': '学习', 'response': '正在查找所有与“学习”相关的笔记...', 'success_response': None}
+2025-07-08 16:58:30,745 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-08 16:58:30,746 - nana_logger - [INFO] - cmd_main.execute_command:81 - [执行器] 收到无需执行的指令。
+2025-07-08 16:58:44,434 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-09 14:47:10,660 - nana_logger - [INFO] - cmd_main._load_plugins:36 - [执行器] 正在从 'F:\fghn的各种文件\有关于自制\自制py程序\nana_2\plugins' 目录加载插件...
+2025-07-09 14:47:10,662 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'color_picker'
+2025-07-09 14:47:10,665 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'note_taker'
+2025-07-09 14:47:10,666 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'sample_plugin'
+2025-07-09 14:47:10,667 - nana_logger - [INFO] - cmd_main._load_plugins:61 -   - 成功加载插件: 'test_plugin'
+2025-07-09 14:47:11,227 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-09 14:47:11,227 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-09 14:47:29,028 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 我有哪些笔记
+2025-07-09 14:47:29,028 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-09 14:47:29,029 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-09 14:47:29,029 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-09 14:47:29,031 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-09 14:47:29,031 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-09 14:47:29,031 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-09 14:47:33,322 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "show_notes", "entity": null, "response": "好的，马上为你展示所有笔记的列表！", "success_response": null}
+2025-07-09 14:47:33,322 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'list_notes', 'args': None, 'response': '好的，马上为你展示所有笔记的列表！'}
+2025-07-09 14:47:33,323 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-09 14:47:33,323 - nana_logger - [INFO] - cmd_main.execute_command:84 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-09 14:47:33,323 - nana_logger - [INFO] - cmd_main.execute_command:90 - [执行器] 调用插件 'note_taker' 执行命令 'list_notes'，参数: None
+2025-07-09 14:47:49,015 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 有关于学习的有什么笔记
+2025-07-09 14:47:49,025 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-09 14:47:49,025 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-09 14:47:49,025 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-09 14:47:49,025 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-09 14:47:49,025 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-09 14:47:49,025 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-09 14:47:52,733 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "search", "entity": "学习", "response": "正在为你查找与“学习”相关的笔记...", "success_response": null}
+2025-07-09 14:47:52,735 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'search_notes', 'args': {'title': '学习'}, 'response': '正在为你查找与“学习”相关的笔记...'}
+2025-07-09 14:47:52,735 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-09 14:47:52,735 - nana_logger - [INFO] - cmd_main.execute_command:84 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-09 14:47:52,736 - nana_logger - [INFO] - cmd_main.execute_command:90 - [执行器] 调用插件 'note_taker' 执行命令 'search_notes'，参数: {'title': '学习'}
+2025-07-09 14:48:53,315 - nana_logger - [INFO] - main.on_app_exit:81 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-09 15:22:54,476 - nana_logger - [INFO] - plugin_manager.load_all_plugins:18 - [插件理] 开始加载所有插件...
+2025-07-09 15:22:54,476 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'color_picker'
+2025-07-09 15:22:54,479 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'note_taker'
+2025-07-09 15:22:54,480 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'sample_plugin'
+2025-07-09 15:22:54,481 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'test_plugin'
+2025-07-09 15:22:54,481 - nana_logger - [INFO] - plugin_manager.load_all_plugins:22 - [插件理] 所有插件加载完毕，共 4 个。
+2025-07-09 15:22:55,026 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-09 15:22:55,027 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-09 15:23:09,228 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 有关于学习的有哪些笔记
+2025-07-09 15:23:09,229 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-09 15:23:09,229 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-09 15:23:09,229 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-09 15:23:09,230 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-09 15:23:09,230 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-09 15:23:09,230 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-09 15:23:14,848 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "search_notes", "keyword": "学习", "response": "正在查找所有与‘学习’相关的笔记...", "success_response": "找到以下与‘学习’相关的笔记：\n- 学习计划\n- 学习总结\n- 学习资料整理"}
+2025-07-09 15:23:14,849 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'search_notes', 'args': None, 'response': '正在查找所有与‘学习’相关的笔记...'}
+2025-07-09 15:23:14,849 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-09 15:23:14,849 - nana_logger - [INFO] - cmd_main.execute_command:39 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-09 15:23:14,849 - nana_logger - [INFO] - cmd_main.execute_command:45 - [执行器] 调用插件 'note_taker' 执行命令 'search_notes'，参数: None
+2025-07-09 15:23:31,812 - nana_logger - [INFO] - main.on_app_exit:88 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-09 15:27:26,532 - nana_logger - [INFO] - plugin_manager.load_all_plugins:18 - [插件理] 开始加载所有插件...
+2025-07-09 15:27:26,533 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'color_picker'
+2025-07-09 15:27:26,535 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'note_taker'
+2025-07-09 15:27:26,536 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'sample_plugin'
+2025-07-09 15:27:26,537 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'test_plugin'
+2025-07-09 15:27:26,537 - nana_logger - [INFO] - plugin_manager.load_all_plugins:22 - [插件理] 所有插件加载完毕，共 4 个。
+2025-07-09 15:27:27,089 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-09 15:27:27,089 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-09 15:27:41,282 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 有关于学习的有哪些笔记
+2025-07-09 15:27:41,283 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-09 15:27:41,283 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-09 15:27:41,283 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-09 15:27:41,284 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-09 15:27:41,284 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-09 15:27:41,284 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-09 15:27:44,185 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "search_notes", "query": "学习", "response": "正在为你查找与“学习”相关的笔记...", "success_response": null}
+2025-07-09 15:27:44,186 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'plugin': 'note_taker', 'command': 'search_notes', 'args': None, 'response': '正在为你查找与“学习”相关的笔记...'}
+2025-07-09 15:27:44,186 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-09 15:27:44,186 - nana_logger - [INFO] - cmd_main.execute_command:39 - [执行器] 收到指令，需要插件 'note_taker' 来执行。
+2025-07-09 15:27:44,186 - nana_logger - [INFO] - cmd_main.execute_command:45 - [执行器] 调用插件 'note_taker' 执行命令 'search_notes'，参数: None
+2025-07-09 15:27:54,860 - nana_logger - [INFO] - main.on_app_exit:88 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-09 15:45:00,399 - nana_logger - [INFO] - plugin_manager.load_all_plugins:18 - [插件理] 开始加载所有插件...
+2025-07-09 15:45:00,400 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'color_picker'
+2025-07-09 15:45:00,403 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'note_taker'
+2025-07-09 15:45:00,403 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'sample_plugin'
+2025-07-09 15:45:00,404 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'test_plugin'
+2025-07-09 15:45:00,404 - nana_logger - [INFO] - plugin_manager.load_all_plugins:22 - [插件理] 所有插件加载完毕，共 4 个。
+2025-07-09 15:45:00,889 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-09 15:45:00,890 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-09 15:45:06,831 - nana_logger - [INFO] - event_handlers.on_send_click:23 - 捕获到用户输入: 你好
+2025-07-09 15:45:06,832 - nana_logger - [INFO] - main_detector.detect_and_parse:25 - [检测器] 开始检测用户意图...
+2025-07-09 15:45:06,832 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:49 - [AI服务] 开始为AI动态构建“超级教科书”...
+2025-07-09 15:45:06,833 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'color_picker' 的专业技能。
+2025-07-09 15:45:06,833 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'note_taker' 的专业技能。
+2025-07-09 15:45:06,833 - nana_logger - [INFO] - ai_service._build_dynamic_prompt:58 -   - 已加载插件 'sample_plugin' 的专业技能。
+2025-07-09 15:45:06,834 - nana_logger - [INFO] - ai_service.recognize_command:96 - [AI服务] 准备调用AI模型...
+2025-07-09 15:45:09,451 - nana_logger - [INFO] - ai_service.recognize_command:105 - [AI服务] AI模型返回原始结果: {"intent": "chat", "entity": null, "response": "你好呀！有什么我可以帮你的吗？", "success_response": null}
+2025-07-09 15:45:09,451 - nana_logger - [INFO] - main_detector.detect_and_parse:32 - [检测器] 从AI服务收到原始指令: {'intent': 'chat', 'entity': None, 'response': '你好呀！有什么我可以帮你的吗？', 'success_response': None}
+2025-07-09 15:45:09,451 - nana_logger - [INFO] - main_detector.detect_and_parse:43 - [检测器] 意图检测流程完成。
+2025-07-09 15:45:09,451 - nana_logger - [INFO] - cmd_main.execute_command:36 - [执行器] 收到无需执行的指令。
+2025-07-09 15:45:12,405 - nana_logger - [INFO] - main.on_app_exit:88 - [总司令] 收到关闭信号，应用即将退出。
+2025-07-09 15:46:34,556 - nana_logger - [INFO] - plugin_manager.load_all_plugins:18 - [插件理] 开始加载所有插件...
+2025-07-09 15:46:34,556 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'color_picker'
+2025-07-09 15:46:34,559 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'note_taker'
+2025-07-09 15:46:34,559 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'sample_plugin'
+2025-07-09 15:46:34,560 - nana_logger - [INFO] - plugin_manager.load_plugin:54 - [插件理] 成功加载插件: 'test_plugin'
+2025-07-09 15:46:34,560 - nana_logger - [INFO] - plugin_manager.load_all_plugins:22 - [插件理] 所有插件加载完毕，共 4 个。
+2025-07-09 15:46:35,103 - nana_logger - [INFO] - ai_service._load_main_prompts:38 - [AI服务] 成功加载“主教科书”: F:\fghn的各种文件\有关于自制\自制py程序\nana_2\IntentDetector\ai_service\prompts.json
+2025-07-09 15:46:35,103 - nana_logger - [INFO] - main_detector.__init__:22 - [检测器] 意图检测器已初始化，并与命令执行器建立连接。
+2025-07-09 15:46:36,680 - nana_logger - [INFO] - main.on_app_exit:88 - [总司令] 收到关闭信号，应用即将退出。

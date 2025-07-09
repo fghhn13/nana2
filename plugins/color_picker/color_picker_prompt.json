@@ -1,0 +1,23 @@
+{
+  "description": "【颜色选择插件】用于在桌面上启动调色盘应用，帮助用户选择颜色。",
+  "examples": [
+    {
+      "user": "帮我打开调色盘",
+      "ai": {
+        "plugin": "color_picker",
+        "command": "open_color_picker",
+        "args": {},
+        "response": "正在为你打开调色盘应用。"
+      }
+    },
+    {
+      "user": "我想选取颜色",
+      "ai": {
+        "plugin": "color_picker",
+        "command": "open_color_picker",
+        "args": {},
+        "response": "好的，现在打开调色盘。"
+      }
+    }
+  ]
+}

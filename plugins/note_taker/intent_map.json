@@ -1,0 +1,11 @@
+{
+  "create": "create_note",
+  "read": "read_note",
+  "delete": "delete_note",
+  "show_notes": "list_notes",
+
+  "search": "search_notes",
+  "search_notes": "search_notes",
+  "search_notes_by_keyword": "search_notes",
+  "clarify_action": "read_note"
+}
