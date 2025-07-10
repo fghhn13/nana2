@@ -11,6 +11,18 @@
       }
     },
     {
+      "intent": "read_note",
+      "description": "当用户想要读取或查看某个具体笔记的详细内容时使用。",
+      "example_user_input": "我想看看我的'购物清单'笔记里写了什么",
+      "example_assistant_output": {
+        "plugin": "note_taker",
+        "command": "read_note",
+        "args": {
+          "title": "购物清单"
+        }
+      }
+    },
+    {
       "user": "删掉那个叫做“购物清单”的笔记",
       "ai": {
         "intent": "delete",
