@@ -7,6 +7,7 @@ from .notetaker_handle import (
     delete_note,
     list_notes,
     search_notes,
+    rename_note,
 )
 from .notetaker_ui import open_note_editor, open_notes_window, confirm_delete
 import queue
@@ -35,6 +36,7 @@ class NoteTakerPlugin(BasePlugin):
             "delete_note",
             "list_notes",
             "search_notes",
+            "rename_note",
         ]
 
     def on_load(self):
@@ -125,6 +127,15 @@ class NoteTakerPlugin(BasePlugin):
                         ),
                     )
                 )
+        elif command == "rename_note":
+            new_title = args.get("new_title") if args else None
+            if not title or not new_title:
+                return
+            result = rename_note(title, new_title)
+            if result.get("status") == "success":
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", result.get("message", ""), "nana_sender")))
+            else:
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", result.get("message", ""), "error_sender")))
         else:
             logger.warning(f"未识别的命令: {command}")
 

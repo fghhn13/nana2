@@ -79,3 +79,24 @@ def search_notes(keyword: str) -> list[str]:
             results.append(note_name)
     return sorted(results)
 
+
+def rename_note(old_title: str, new_title: str) -> dict:
+    """重命名现有笔记"""
+    ensure_notes_folder_exists()
+    old_file_path = get_note_path(old_title)
+    new_file_path = get_note_path(new_title)
+
+    if not os.path.exists(old_file_path):
+        return {"status": "error", "message": f"错误：找不到名为 '{old_title}' 的笔记。"}
+
+    if os.path.exists(new_file_path):
+        return {"status": "error", "message": f"错误：名为 '{new_title}' 的笔记已经存在了，换个新名字吧！"}
+
+    try:
+        os.rename(old_file_path, new_file_path)
+        print(f"成功将笔记 '{old_title}' 重命名为 '{new_title}'")
+        return {"status": "success", "message": f"成功将笔记 '{old_title}' 重命名为 '{new_title}'！"}
+    except Exception as e:
+        print(f"重命名文件时发生错误: {e}")
+        return {"status": "error", "message": f"修改笔记名称时发生意外：{e}"}
+
