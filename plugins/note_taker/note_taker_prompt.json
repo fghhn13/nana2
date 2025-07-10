@@ -23,6 +23,18 @@
       }
     },
     {
+      "intent": "edit_note",
+      "description": "当用户提到打开或修改某个笔记时使用。",
+      "example_user_input": "帮我打开'工作计划'笔记",
+      "example_assistant_output": {
+        "plugin": "note_taker",
+        "command": "edit_note",
+        "args": {
+          "title": "工作计划"
+        }
+      }
+    },
+    {
       "user": "删掉那个叫做“购物清单”的笔记",
       "ai": {
         "intent": "delete",
