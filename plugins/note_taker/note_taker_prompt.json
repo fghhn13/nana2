@@ -126,6 +126,20 @@
         "response": "明白！正在为你打开笔记“教程1”。",
         "success_response": null
       }
+    },
+    {
+      "intent": "rename_note",
+      "description": "当用户想要修改一个已存在笔记的名称时使用。",
+      "example_user_input": "把笔记'购物清单'的名字改成'周末采购计划'",
+      "example_assistant_output": {
+        "plugin": "note_taker",
+        "command": "rename_note",
+        "args": {
+          "title": "购物清单",
+          "new_title": "周末采购计划"
+        },
+        "response": "好的，我这就去修改笔记名称！"
+      }
     }
   ]
 }
