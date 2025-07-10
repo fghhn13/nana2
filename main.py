@@ -80,6 +80,11 @@ class AppController:
             response_msg = ("Nana酱", ai_response, "nana_sender")
             self.view.ui_queue.put(("APPEND_MESSAGE", response_msg))
             self.conversation_history.append({"role": "assistant", "content": ai_response})
+        if command.get("intent") == "needs_clarification":
+            # 只显示反问语句，不调用任何插件
+            self.view.ui_queue.put(("SET_STATE", "enabled"))
+            return
+
         self.executor.execute_command(command, self)
         self.view.ui_queue.put(("SET_STATE", "enabled"))
 
