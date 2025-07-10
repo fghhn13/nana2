@@ -70,11 +70,11 @@ def open_notes_window(notes: list[str], master_window=None):
         selection = listbox.curselection()
         if selection:
             note_name = listbox.get(selection[0])
-            try:
-                content = read_note(note_name)
-                open_note_editor(note_name, content, master_window)
-            except Exception as e:
-                messagebox.showerror("打开失败", f"无法打开笔记 '{note_name}': {e}")
+            result = read_note(note_name)
+            if result.get("status") == "success":
+                open_note_editor(note_name, result.get("content", ""), master_window)
+            else:
+                messagebox.showerror("打开失败", f"无法打开笔记 '{note_name}': {result.get('message', '')}")
 
     listbox.bind("<Double-1>", on_open)
 
