@@ -47,18 +47,26 @@ class NoteTakerPlugin(BasePlugin):
             created = create_note(title)
             msg = f"新建笔记 '{title}' 成功。" if created else f"笔记 '{title}' 已存在。"
             controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
-            content = "" if created else read_note(title)
+            if created:
+                content = ""
+            else:
+                result = read_note(title)
+                if result.get("status") == "success":
+                    content = result.get("content", "")
+                else:
+                    controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", result.get("message", ""), "error_sender")))
+                    content = ""
             run_on_ui(controller, open_note_editor, title, content, controller.view.master)
         elif command == "read_note":
             if not title:
                 return
-            try:
-                content = read_note(title)
-            except FileNotFoundError:
-                err = f"笔记 '{title}' 不存在。"
+            result = read_note(title)
+            if result.get("status") == "success":
+                content = result.get("content", "")
+                run_on_ui(controller, open_note_editor, title, content, controller.view.master)
+            else:
+                err = result.get("message", "")
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", err, "error_sender")))
-                return
-            run_on_ui(controller, open_note_editor, title, content, controller.view.master)
         elif command == "delete_note":
             if not title:
                 return
