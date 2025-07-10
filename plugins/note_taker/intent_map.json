@@ -7,6 +7,10 @@
   "search": "search_notes",
   "search_notes": "search_notes",
   "search_notes_by_keyword": "search_notes",
-  "clarify_action": "read_note",
+  "clarify_action": "edit_note",
+  "confirm_action": "edit_note",
+  "edit": "edit_note",
+  "open": "edit_note",
+  "modify": "edit_note",
   "read_note": "read_note"
 }

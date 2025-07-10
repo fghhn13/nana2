@@ -31,6 +31,7 @@ class NoteTakerPlugin(BasePlugin):
         return [
             "create_note",
             "read_note",
+            "edit_note",
             "delete_note",
             "list_notes",
             "search_notes",
@@ -63,10 +64,24 @@ class NoteTakerPlugin(BasePlugin):
             result = read_note(title)
             if result.get("status") == "success":
                 content = result.get("content", "")
-                run_on_ui(controller, open_note_editor, title, content, controller.view.master)
+                if content:
+                    msg = f"笔记 '{title}' 的内容如下:\n{content}"
+                else:
+                    msg = f"笔记 '{title}' 目前是空的。"
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
             else:
                 err = result.get("message", "")
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", err, "error_sender")))
+        elif command == "edit_note":
+            if not title:
+                return
+            result = read_note(title)
+            if result.get("status") == "success":
+                content = result.get("content", "")
+            else:
+                create_note(title)
+                content = ""
+            run_on_ui(controller, open_note_editor, title, content, controller.view.master)
         elif command == "delete_note":
             if not title:
                 return
