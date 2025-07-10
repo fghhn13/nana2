@@ -19,7 +19,8 @@
         "command": "read_note",
         "args": {
           "title": "购物清单"
-        }
+        },
+        "response": "好的，正在为你读取笔记..."
       }
     },
     {
