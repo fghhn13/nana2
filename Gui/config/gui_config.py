@@ -8,7 +8,7 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 # 基于根目录构建其他路径 (Build other paths based on the root directory)
 IMAGES_DIR = os.path.join(ROOT_DIR, "images")
 CONFIG_DIR = os.path.join(ROOT_DIR, "config")
-NOTES_DIR = os.path.join(ROOT_DIR, "MyNotes") # 笔记文件夹
+NOTES_DIR = os.path.join(ROOT_DIR, "plugins", "note_taker", "MyNotes")
 
 # --- 文件名管理 (File Name Management) ---
 PERSONA_FILE = os.path.join(ROOT_DIR, "nana_persona.txt")

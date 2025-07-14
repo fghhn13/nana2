@@ -118,10 +118,15 @@ class AIService:
                 if mapping:
                     plugin_name, command_name = mapping
                     args = {}
-                    if parsed_response.get("entity"):
-                        args["title"] = parsed_response["entity"]
-                    elif parsed_response.get("target"):
-                        args["title"] = parsed_response["target"]
+                    keyword = (
+                            parsed_response.get("entity")
+                            or parsed_response.get("target")
+                            or parsed_response.get("query")
+                            or parsed_response.get("keyword")  # 从日志和prompt文件看，有时候也会用keyword
+                    )
+
+                    if keyword:
+                        args["title"] = keyword
                     parsed_response = {
                         "plugin": plugin_name,
                         "command": command_name,

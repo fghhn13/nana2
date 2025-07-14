@@ -8,6 +8,7 @@ from .notetaker_handle import (
     search_notes,
     rename_note,
     get_note_content,
+    append_to_note,
 )
 from .notetaker_ui import open_note_editor, open_notes_window, confirm_delete
 import queue
@@ -36,6 +37,7 @@ class NoteTakerPlugin(BasePlugin):
             "list_notes",
             "search_notes",
             "rename_note",
+            "append_to_note"
         ]
 
     def on_load(self):
@@ -85,13 +87,13 @@ class NoteTakerPlugin(BasePlugin):
 
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", "没有找到任何笔记。", "nana_sender")))
         elif command == "search_notes":
-            keyword = args.get("title") if args else None
+            keyword = args.get("keyword") if args else None
             if not keyword:
                 return
             notes = search_notes(keyword)
             if notes:
                 note_list = "\n".join(f"- {n}" for n in notes)
-                msg = f"我找到有关于{keyword}的笔记有:\n{note_list}\n你是说哪一个？"
+                msg = f"我找到了和 '{keyword}' 相关的笔记有这些哦：\n{note_list}\n需要我帮你打开哪一个吗？"
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
                 run_on_ui(controller, open_notes_window, notes, controller.view.master)
             else:
@@ -116,6 +118,29 @@ class NoteTakerPlugin(BasePlugin):
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", result.get("message", ""), "error_sender")))
         elif command == "answer_from_note":
             self.answer_from_note(args or {}, controller)
+        elif command == "append_to_note":
+            title = args.get("title")
+            content_to_add = args.get("content_to_add")
+
+            if not title or not content_to_add:
+                # AI一般不会犯这种错，但以防万一
+                controller.view.ui_queue.put(
+                    ("APPEND_MESSAGE", ("Nana酱", "哎呀，我好像忘记要记什么或者记在哪里了...", "error_sender")))
+                return
+
+            success = append_to_note(title, content_to_add)
+
+            if success:
+                # 成功后的反馈
+                msg = f"我已经帮你把内容添加到《{title}》里啦！"
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
+                # 打开笔记让用户检查
+                note_content = get_note_content(title) or ""
+                run_on_ui(controller, open_note_editor, title, note_content, controller.view.master)
+            else:
+                # 失败后的反馈
+                controller.view.ui_queue.put(
+                    ("APPEND_MESSAGE", ("Nana酱", f"糟糕...在给《{title}》做笔记的时候出错了。", "error_sender")))
         else:
             logger.warning(f"未识别的命令: {command}")
 

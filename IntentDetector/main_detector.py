@@ -31,13 +31,7 @@ class MainDetector:
         )
         logger.info(f"[检测器] 从AI服务收到原始指令: {raw_command}")
 
-        # --- 第 2 步：(即将到来) 让“参谋部”(CommandParser)去审查和翻译指令 ---
-        # # 这一步我们先注释掉，等建好 CommandParser 再启用
-        # clean_command = self.command_parser.parse(raw_command_from_ai)
-        # logger.info(f"[检测器] 经过解析器处理后的干净指令: {clean_command}")
 
-        # 在“参谋部”建好之前，我们先直接把原始指令当作最终结果返回
-        #
         final_command = raw_command
 
         logger.info("[检测器] 意图检测流程完成。")
