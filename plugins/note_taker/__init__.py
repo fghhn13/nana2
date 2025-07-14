@@ -3,11 +3,11 @@ from core.log.logger_config import logger
 from .notetaker_handle import (
     ensure_notes_folder_exists,
     create_note,
-    read_note,
     delete_note,
     list_notes,
     search_notes,
     rename_note,
+    get_note_content,
 )
 from .notetaker_ui import open_note_editor, open_notes_window, confirm_delete
 import queue
@@ -31,7 +31,6 @@ class NoteTakerPlugin(BasePlugin):
     def get_commands(self) -> list[str]:
         return [
             "create_note",
-            "read_note",
             "edit_note",
             "delete_note",
             "list_notes",
@@ -53,34 +52,13 @@ class NoteTakerPlugin(BasePlugin):
             if created:
                 content = ""
             else:
-                result = read_note(title)
-                if result.get("status") == "success":
-                    content = result.get("content", "")
-                else:
-                    controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", result.get("message", ""), "error_sender")))
-                    content = ""
+                content = get_note_content(title) or ""
             run_on_ui(controller, open_note_editor, title, content, controller.view.master)
-        elif command == "read_note":
-            if not title:
-                return
-            result = read_note(title)
-            if result.get("status") == "success":
-                content = result.get("content", "")
-                if content:
-                    msg = f"笔记 '{title}' 的内容如下:\n{content}"
-                else:
-                    msg = f"笔记 '{title}' 目前是空的。"
-                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
-            else:
-                err = result.get("message", "")
-                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", err, "error_sender")))
         elif command == "edit_note":
             if not title:
                 return
-            result = read_note(title)
-            if result.get("status") == "success":
-                content = result.get("content", "")
-            else:
+            content = get_note_content(title)
+            if content is None:
                 create_note(title)
                 content = ""
             run_on_ui(controller, open_note_editor, title, content, controller.view.master)

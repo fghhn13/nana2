@@ -1,6 +1,5 @@
 {
   "create": "create_note",
-  "read": "read_note",
   "delete": "delete_note",
   "show_notes": "list_notes",
 
@@ -12,6 +11,5 @@
   "edit": "edit_note",
   "open": "edit_note",
   "modify": "edit_note",
-  "read_note": "read_note",
   "rename_note": "rename_note"
 }

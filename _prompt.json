@@ -14,13 +14,6 @@
       "args": {
         "title": "String // 搜索关键词"
       }
-    },
-    {
-      "command": "note_taker.read_note",
-      "description": "最低优先级：仅当用户明确要求‘朗读’或‘显示’一篇笔记的全文，且没有提出任何具体问题时，才使用此命令。",
-      "args": {
-        "title": "String // 要朗读的笔记标题"
-      }
     }
   ]
 }

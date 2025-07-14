@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import scrolledtext, messagebox
-from .notetaker_handle import get_note_path, read_note
+from .notetaker_handle import get_note_path, get_note_content
 from Gui.config import gui_config
 
 
@@ -70,11 +70,8 @@ def open_notes_window(notes: list[str], master_window=None):
         selection = listbox.curselection()
         if selection:
             note_name = listbox.get(selection[0])
-            result = read_note(note_name)
-            if result.get("status") == "success":
-                open_note_editor(note_name, result.get("content", ""), master_window)
-            else:
-                messagebox.showerror("打开失败", f"无法打开笔记 '{note_name}': {result.get('message', '')}")
+            content = get_note_content(note_name) or ""
+            open_note_editor(note_name, content, master_window)
 
     listbox.bind("<Double-1>", on_open)
 

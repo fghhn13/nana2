@@ -43,21 +43,6 @@ def create_note(note_name: str) -> bool:
 def delete_note(note_name: str) -> None:
     os.remove(get_note_path(note_name))
 
-def read_note(note_name: str) -> dict:
-    """读取指定笔记内容并返回统一的结果结构"""
-    if not note_name or os.path.basename(note_name) != note_name:
-        return {"status": "error", "message": "无效的笔记标题"}
-
-    note_path = get_note_path(note_name)
-    if not os.path.exists(note_path):
-        return {"status": "error", "message": f"笔记 '{note_name}' 不存在"}
-
-    try:
-        with open(note_path, "r", encoding="utf-8") as f:
-            content = f.read()
-        return {"status": "success", "content": content}
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
 
 
 def search_notes(keyword: str) -> list[str]:
