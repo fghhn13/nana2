@@ -1,6 +1,6 @@
 import os
 from Gui.config import gui_config
-
+from datetime import datetime
 NOTES_FOLDER = "MyNotes"
 
 # Ensure notes directory exists
@@ -101,3 +101,25 @@ def get_note_content(title: str) -> str | None:
     else:
         return None
 
+
+def append_to_note(title: str, content: str) -> bool:
+    """
+    在指定笔记的末尾追加内容。如果笔记不存在，则创建它。
+    返回操作是否成功。
+    """
+    ensure_notes_folder_exists()
+    note_path = get_note_path(title)
+
+    # 格式化要追加的内容
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+    formatted_content = f"\n\n--- (Nana帮你记在 {timestamp}) ---\n{content}\n"
+
+    try:
+        # 使用 'a' 模式来追加内容，文件不存在会自动创建
+        with open(note_path, "a", encoding="utf-8") as f:
+            f.write(formatted_content)
+        return True
+    except Exception as e:
+        # 你可以在这里用 logger 记录详细错误
+        print(f"追加笔记时发生错误: {e}")
+        return False
