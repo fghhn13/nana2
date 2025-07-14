@@ -114,8 +114,71 @@ class NoteTakerPlugin(BasePlugin):
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", result.get("message", ""), "nana_sender")))
             else:
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", result.get("message", ""), "error_sender")))
+        elif command == "answer_from_note":
+            self.answer_from_note(args or {}, controller)
         else:
             logger.warning(f"未识别的命令: {command}")
+
+    def answer_from_note(self, args: dict, controller):
+        """根据笔记内容回答问题"""
+        note_title = args.get("title")
+        user_question = args.get("question")
+
+        if not note_title or not user_question:
+            controller.view.ui_queue.put(
+                (
+                    "APPEND_MESSAGE",
+                    (
+                        "Nana",
+                        "抱歉，我没有理解要查哪个笔记或具体问题是什么。",
+                        "nana_sender",
+                    ),
+                )
+            )
+            return
+
+        controller.view.ui_queue.put(
+            (
+                "APPEND_MESSAGE",
+                ("Nana", f"正在翻阅《{note_title}》笔记...", "nana_sender"),
+            )
+        )
+        note_content = get_note_content(note_title)
+
+        if note_content:
+            qa_prompt = f"""
+            你是一个智能助手，请严格根据下面提供的“笔记内容”，回答用户的“问题”。
+            要求：
+            1. 你的回答必须完全基于提供的“笔记内容”。
+            2. 如果笔记内容无法回答问题，请明确说明“根据笔记内容，我无法回答这个问题”。
+            3. 不要编造任何笔记中不存在的信息。
+
+            --- 笔记内容 ---
+            标题：{note_title}
+            {note_content}
+            --- 笔记内容结束 ---
+
+            现在，请回答这个问题："{user_question}"
+            """
+
+            controller.view.ui_queue.put(
+                ("APPEND_MESSAGE", ("Nana", "正在思考答案...", "nana_sender"))
+            )
+            final_answer = controller.detector.ai_service.get_completion(qa_prompt)
+            controller.view.ui_queue.put(
+                ("APPEND_MESSAGE", ("Nana", final_answer, "nana_sender"))
+            )
+        else:
+            controller.view.ui_queue.put(
+                (
+                    "APPEND_MESSAGE",
+                    (
+                        "Nana",
+                        f"抱歉主人，我找不到名为《{note_title}》的笔记哦。",
+                        "nana_sender",
+                    ),
+                )
+            )
 
 
 def get_plugin():
