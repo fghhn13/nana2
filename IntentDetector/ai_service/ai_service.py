@@ -135,3 +135,20 @@ class AIService:
         except Exception as e:
             logger.error(f"[AI服务] 调用API时发生未知错误: {e}")
             return fallback_command
+
+    def get_completion(self, prompt: str) -> str:
+        """给定提示语，直接获取AI的回答文本。"""
+        if not self.client:
+            logger.error("[AI服务] AI客户端未初始化，无法生成回答。")
+            return "AI服务不可用。"
+
+        try:
+            response = self.client.chat.completions.create(
+                model="qwen-plus",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.1,
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            logger.error(f"[AI服务] 获取回答失败: {e}")
+            return "抱歉，生成答案时出现错误。"

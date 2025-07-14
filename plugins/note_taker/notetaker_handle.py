@@ -100,3 +100,19 @@ def rename_note(old_title: str, new_title: str) -> dict:
         print(f"重命名文件时发生错误: {e}")
         return {"status": "error", "message": f"修改笔记名称时发生意外：{e}"}
 
+
+def get_note_content(title: str) -> str | None:
+    """根据标题获取笔记的原始内容。如果文件不存在则返回 None。"""
+    safe_title = title.replace("..", "").replace("/", "").replace("\\", "")
+    filepath = os.path.join(NOTES_DIR, f"{safe_title}.txt")
+
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                return f.read()
+        except Exception as e:
+            print(f"Error reading note '{title}': {e}")
+            return None
+    else:
+        return None
+
