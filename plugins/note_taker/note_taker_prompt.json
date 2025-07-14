@@ -12,15 +12,6 @@
       }
     },
     {
-      "user": "我想看看我的'购物清单'笔记里写了什么",
-      "ai": {
-        "plugin": "note_taker",
-        "command": "read_note",
-        "args": {"title": "购物清单"},
-        "response": "好的，正在为你读取笔记..."
-      }
-    },
-    {
       "user": "帮我打开'工作计划'笔记",
       "ai": {
         "plugin": "note_taker",

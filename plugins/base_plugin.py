@@ -27,7 +27,7 @@ class BasePlugin:
     def get_commands(self) -> list[str]:
         """
         【必须实现】返回这个插件能执行的所有命令列表。
-        例如: ['create_note', 'read_note', 'delete_note']
+        例如: ['create_note', 'edit_note', 'delete_note']
         CommandExecutor 会用这个列表来知道“这个插件会做什么”。
         """
         raise NotImplementedError("每个插件都必须实现 get_commands() 方法！")
