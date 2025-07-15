@@ -1,0 +1,39 @@
+
+{
+  "description": "【应用启动插件】用于根据用户的指令，打开电脑上已经配置好的应用程序。",
+  "examples": [
+    {
+      "user": "帮我打开记事本",
+      "ai": {
+        "plugin": "exe_starter",
+        "command": "start_app",
+        "args": {
+          "app_name": "记事本"
+        },
+        "response": "好哒，正在为您打开记事本！"
+      }
+    },
+    {
+      "user": "启动微信",
+      "ai": {
+        "plugin": "exe_starter",
+        "command": "start_app",
+        "args": {
+          "app_name": "微信"
+        },
+        "response": "收到！马上启动微信！"
+      }
+    },
+    {
+      "user": "我想用一下计算器",
+      "ai": {
+        "plugin": "exe_starter",
+        "command": "start_app",
+        "args": {
+          "app_name": "计算器"
+        },
+        "response": "没问题，计算器来啦！"
+      }
+    }
+  ]
+}

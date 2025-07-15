@@ -19,7 +19,7 @@ RENAME_NOTE_SUCCESS = "成功将笔记 '{old_title}' 重命名为 '{new_title}'�
 RENAME_NOTE_ERROR = "修改笔记名称时发生意外：{e}"
 
 # 在笔记中追加内容时的时间戳前缀
-NOTE_APPEND_PREFIX = "--- (Nana帮你记在 {timestamp}) ---"
+NOTE_APPEND_PREFIX = "--- (Nana在 {timestamp}帮你记：) ---"
 
 # 插件交互消息
 CREATE_SUCCESS = "新建笔记 '{title}' 成功。"
