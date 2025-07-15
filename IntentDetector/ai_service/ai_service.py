@@ -18,7 +18,7 @@ class AIService:
             logger.error("[AI服务] 未在.env文件中找到 DASHSCOPE_API_KEY")
             self.client = None
         else:
-            self.client = OpenAI(api_key=self.api_key, base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
+            self.client = OpenAI(api_key=self.api_key, base_url=settings.Api_url)
 
         # 【修正点 #1】
         # self.prompts 似乎没有被使用，我们可以先用 self.main_prompts

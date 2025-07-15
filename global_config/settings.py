@@ -32,6 +32,9 @@ LOG_DIR = os.path.join(ROOT_DIR, 'core', 'log')
 # --- AI 相关路径 ---
 INTENT_DETECTOR_DIR = os.path.join(ROOT_DIR, 'IntentDetector')
 PROMPTS_FILE = os.path.join(INTENT_DETECTOR_DIR, 'ai_service','prompts.json')
+#api_url
+Api_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+
 
 # ==================== 具体的资源文件路径 ====================
 IMG_SEND_NORMAL = os.path.join(IMAGES_DIR, "button_normal.png")

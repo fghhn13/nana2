@@ -1,5 +1,5 @@
 {
-  "description": "记事本插件：可以创建、查找、删除以及列出笔记。",
+  "description": "记事本插件：可以创建、查找、删除、重命名以及列出笔记。",
   "examples": [
     {
       "user": "帮我找一下上周的会议记录",
@@ -17,6 +17,15 @@
         "plugin": "note_taker",
         "command": "edit_note",
         "args": {"title": "工作计划"}
+      }
+    },
+    {
+      "user": "哪些笔记里提到了“项目计划”？",
+      "ai": {
+        "plugin": "note_taker",
+        "command": "search_notes",
+        "args": {"keyword": "项目计划"},
+        "response": "收到！Nana酱正在努力翻找提到“项目计划”的笔记哦~"
       }
     },
     {
@@ -101,6 +110,19 @@
         "response": "明白！正在为你打开笔记“教程1”。"
       }
     },
+    {
+      "user": "根据我的“项目A规划”笔记，总结一下下周的主要任务有哪些？",
+      "ai": {
+        "plugin": "note_taker",
+        "command": "answer_from_note",
+        "args": {
+          "title": "项目A规划",
+          "question": "下周的主要任务有哪些？"
+        },
+        "response": "好的，我正在查阅《项目A规划》笔记，帮你总结下周的主要任务，请稍等哦~"
+      }
+    },
+
     {
       "user": "把笔记'购物清单'的名字改成'周末采购计划'",
       "ai": {
