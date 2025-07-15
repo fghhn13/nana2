@@ -8,8 +8,8 @@ NOTES_FOLDER = "MyNotes"
 NOTES_DIR = os.path.join(settings.PLUGINS_DIR, 'note_taker', NOTES_FOLDER)
 
 # 笔记编辑器默认尺寸
-EDITOR_WIDTH = 40
-EDITOR_HEIGHT = 60
+EDITOR_WIDTH = 35
+EDITOR_HEIGHT = 33
 
 # --- 消息模板 ---
 # 重命名笔记相关
