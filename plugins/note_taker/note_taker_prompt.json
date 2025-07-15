@@ -131,6 +131,38 @@
         "args": {"title": "购物清单", "new_title": "周末采购计划"},
         "response": "好的，我这就去修改笔记名称！"
       }
+    },
+    {
+      "user": "帮我记一下，这周五之前要把项目报告写完。",
+      "ai": {
+        "plugin": "note_taker",
+        "command": "ask_which_note_to_append",
+        "args": {
+          "content_to_add": "本周五前完成项目报告"
+        },
+        "response": "好的！这个重要提醒要记在哪个笔记里呢？还是需要我为你创建一个新的笔记？"
+      }
+    },
+    {
+      "conversation": [
+        {
+          "role": "assistant",
+          "content": "好的！这个重要提醒要记在哪个笔记里呢？还是需要我为你创建一个新的笔记？"
+        },
+        {
+          "role": "user",
+          "content": "就记在我的“工作任务”笔记里吧"
+        }
+      ],
+      "ai": {
+        "plugin": "note_taker",
+        "command": "append_to_note",
+        "args": {
+          "title": "工作任务",
+          "content_to_add": "本周五前完成项目报告"
+        },
+        "response": "没问题！我已经帮你把任务记在《工作任务》里啦！"
+      }
     }
   ]
 }
