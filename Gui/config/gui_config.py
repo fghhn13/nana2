@@ -18,15 +18,15 @@ IMG_SEND_PRESS = os.path.join(IMAGES_DIR, "button_press.png")
 
 # --- UI 字符串常量 (UI String Constants) ---
 # 窗口标题 (Window Titles)
-APP_TITLE = "Nana的AI记事本 ✨"
-NOTES_WINDOW_TITLE = "我的笔记"
-NOTE_EDITOR_TITLE_PREFIX = "编辑笔记："
-SAVE_BUTTON_TEXT = "保存笔记"
-MAIN_WINDOW_SIZE = "1100x800"
+APP_TITLE = "Nana_assistant✨"
+NOTES_WINDOW_TITLE = "my_note"
+NOTE_EDITOR_TITLE_PREFIX = "edit_note："
+SAVE_BUTTON_TEXT = "save"
+MAIN_WINDOW_SIZE = "600x1000"
 # 发送者名称 (Sender Names)
-SENDER_USER = "你"
-SENDER_AI = "Nana"
-SENDER_AI_ERROR = "Nana酱"
+SENDER_USER = "Fghn"
+SENDER_AI = "Nana_system"
+SENDER_AI_ERROR = "Nana"
 
 # UI 文本 (UI Texts)
 INPUT_PLACEHOLDER = "在这里输入消息..."

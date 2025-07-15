@@ -60,7 +60,7 @@ class AppController:
 
     def start_app(self):
         """应用启动时，由 main 函数调用。"""
-        welcome_msg = ("Nana酱", "主人，所有模块已连接，大脑已上线！请下达指令吧！", "nana_sender")
+        welcome_msg = ("Nana", "ready to start!", "nana_sender")
         self.view.ui_queue.put(("APPEND_MESSAGE", welcome_msg))
 
     def process_user_input(self, user_text: str):
@@ -121,4 +121,5 @@ if __name__ == "__main__":
     # 启动逻辑应该由AppController自己管理，或者由一个更上层的逻辑调用
     # 在这里，我们让MainWindow的初始化去触发start_app
     main_view.master.after(100, controller.start_app)
-    root.mainloop()
+
+    root.mainloop()
