@@ -40,14 +40,11 @@ def open_note_editor(note_name: str, content: str = "", master_window=None):
                 parent=editor_window,
             )
 
-    save_button = tk.Button(
-        editor_window,
-        text=gui_config.SAVE_BUTTON_TEXT,
-        command=save_note,
-        bg=gui_config.BG_BUTTON,
-        fg=gui_config.FG_BUTTON,
-    )
-    save_button.pack(pady=5)
+    def on_close():
+        save_note()
+        editor_window.destroy()
+
+    editor_window.protocol("WM_DELETE_WINDOW", on_close)
 
 
 def open_notes_window(notes: list[str], master_window=None):
