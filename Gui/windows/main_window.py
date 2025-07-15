@@ -29,7 +29,7 @@ class MainWindow:
             self.img_send_normal = None
         # --- 1. 基础窗口设置 ---
         self.master.title(self.gui_config.APP_TITLE)
-        self.master.geometry("1100x800")
+        self.master.geometry(self.gui_config.MAIN_WINDOW_SIZE)
         self.master.config(bg=self.gui_config.BG_MAIN)
         self.master.protocol("WM_DELETE_WINDOW", self.on_closing)
 

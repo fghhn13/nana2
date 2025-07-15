@@ -8,7 +8,6 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 # 基于根目录构建其他路径 (Build other paths based on the root directory)
 IMAGES_DIR = os.path.join(ROOT_DIR, "images")
 CONFIG_DIR = os.path.join(ROOT_DIR, "config")
-NOTES_DIR = os.path.join(ROOT_DIR, "plugins", "note_taker", "MyNotes")
 
 # --- 文件名管理 (File Name Management) ---
 PERSONA_FILE = os.path.join(ROOT_DIR, "nana_persona.txt")
@@ -23,6 +22,7 @@ APP_TITLE = "Nana的AI记事本 ✨"
 NOTES_WINDOW_TITLE = "我的笔记"
 NOTE_EDITOR_TITLE_PREFIX = "编辑笔记："
 SAVE_BUTTON_TEXT = "保存笔记"
+MAIN_WINDOW_SIZE = "1100x800"
 # 发送者名称 (Sender Names)
 SENDER_USER = "你"
 SENDER_AI = "Nana"
