@@ -11,6 +11,22 @@ from .notetaker_handle import (
     append_to_note,
 )
 from .notetaker_ui import open_note_editor, open_notes_window, confirm_delete
+from .note_config import (
+    CREATE_SUCCESS,
+    NOTE_EXISTS,
+    DELETE_SUCCESS,
+    NOTE_NOT_FOUND,
+    NO_NOTES_FOUND,
+    SEARCH_RESULTS,
+    SEARCH_NONE,
+    CANCEL_DELETE,
+    PARAM_MISSING,
+    APPEND_SUCCESS,
+    APPEND_ERROR,
+    READING_NOTE,
+    NOTE_QA_NOT_FOUND,
+    UNKNOWN_QA,
+)
 import queue
 
 
@@ -49,7 +65,11 @@ class NoteTakerPlugin(BasePlugin):
             if not title:
                 return
             created = create_note(title)
-            msg = f"新建笔记 '{title}' 成功。" if created else f"笔记 '{title}' 已存在。"
+            msg = (
+                CREATE_SUCCESS.format(title=title)
+                if created
+                else NOTE_EXISTS.format(title=title)
+            )
             controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
             if created:
                 content = ""
@@ -69,14 +89,14 @@ class NoteTakerPlugin(BasePlugin):
                 return
             confirmed = run_on_ui(controller, confirm_delete, title, controller.view.master)
             if not confirmed:
-                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", "已取消删除。", "nana_sender")))
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", CANCEL_DELETE, "nana_sender")))
                 return
             try:
                 delete_note(title)
-                msg = f"已删除笔记 '{title}'。"
+                msg = DELETE_SUCCESS.format(title=title)
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
             except FileNotFoundError:
-                err = f"笔记 '{title}' 不存在。"
+                err = NOTE_NOT_FOUND.format(title=title)
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", err, "error_sender")))
         elif command == "list_notes":
             notes = list_notes()
@@ -84,8 +104,7 @@ class NoteTakerPlugin(BasePlugin):
                 run_on_ui(controller, open_notes_window, notes, controller.view.master)
 
             else:
-
-                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", "没有找到任何笔记。", "nana_sender")))
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", NO_NOTES_FOUND, "nana_sender")))
         elif command == "search_notes":
             keyword = args.get("keyword") if args else None
             if not keyword:
@@ -93,20 +112,11 @@ class NoteTakerPlugin(BasePlugin):
             notes = search_notes(keyword)
             if notes:
                 note_list = "\n".join(f"- {n}" for n in notes)
-                msg = f"我找到了和 '{keyword}' 相关的笔记有这些哦：\n{note_list}\n需要我帮你打开哪一个吗？"
+                msg = SEARCH_RESULTS.format(keyword=keyword, note_list=note_list)
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
                 run_on_ui(controller, open_notes_window, notes, controller.view.master)
             else:
-                controller.view.ui_queue.put(
-                    (
-                        "APPEND_MESSAGE",
-                        (
-                            "Nana",
-                            f"没有找到与 '{keyword}' 相关的笔记。",
-                            "nana_sender",
-                        ),
-                    )
-                )
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", SEARCH_NONE.format(keyword=keyword), "nana_sender")))
         elif command == "rename_note":
             new_title = args.get("new_title") if args else None
             if not title or not new_title:
@@ -124,23 +134,21 @@ class NoteTakerPlugin(BasePlugin):
 
             if not title or not content_to_add:
                 # AI一般不会犯这种错，但以防万一
-                controller.view.ui_queue.put(
-                    ("APPEND_MESSAGE", ("Nana酱", "哎呀，我好像忘记要记什么或者记在哪里了...", "error_sender")))
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", PARAM_MISSING, "error_sender")))
                 return
 
             success = append_to_note(title, content_to_add)
 
             if success:
                 # 成功后的反馈
-                msg = f"我已经帮你把内容添加到《{title}》里啦！"
+                msg = APPEND_SUCCESS.format(title=title)
                 controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", msg, "nana_sender")))
                 # 打开笔记让用户检查
                 note_content = get_note_content(title) or ""
                 run_on_ui(controller, open_note_editor, title, note_content, controller.view.master)
             else:
                 # 失败后的反馈
-                controller.view.ui_queue.put(
-                    ("APPEND_MESSAGE", ("Nana酱", f"糟糕...在给《{title}》做笔记的时候出错了。", "error_sender")))
+                controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana酱", APPEND_ERROR.format(title=title), "error_sender")))
         else:
             logger.warning(f"未识别的命令: {command}")
 
@@ -150,24 +158,10 @@ class NoteTakerPlugin(BasePlugin):
         user_question = args.get("question")
 
         if not note_title or not user_question:
-            controller.view.ui_queue.put(
-                (
-                    "APPEND_MESSAGE",
-                    (
-                        "Nana",
-                        "抱歉，我没有理解要查哪个笔记或具体问题是什么。",
-                        "nana_sender",
-                    ),
-                )
-            )
+            controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", UNKNOWN_QA, "nana_sender")))
             return
 
-        controller.view.ui_queue.put(
-            (
-                "APPEND_MESSAGE",
-                ("Nana", f"正在翻阅《{note_title}》笔记...", "nana_sender"),
-            )
-        )
+        controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", READING_NOTE.format(note_title=note_title), "nana_sender")))
         note_content = get_note_content(note_title)
 
         if note_content:
@@ -194,16 +188,7 @@ class NoteTakerPlugin(BasePlugin):
                 ("APPEND_MESSAGE", ("Nana", final_answer, "nana_sender"))
             )
         else:
-            controller.view.ui_queue.put(
-                (
-                    "APPEND_MESSAGE",
-                    (
-                        "Nana",
-                        f"抱歉主人，我找不到名为《{note_title}》的笔记哦。",
-                        "nana_sender",
-                    ),
-                )
-            )
+            controller.view.ui_queue.put(("APPEND_MESSAGE", ("Nana", NOTE_QA_NOT_FOUND.format(note_title=note_title), "nana_sender")))
 
 
 def get_plugin():

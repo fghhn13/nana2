@@ -1,6 +1,14 @@
 import os
 from datetime import datetime
-from .note_config import NOTES_DIR, NOTES_FOLDER
+from .note_config import (
+    NOTES_DIR,
+    NOTES_FOLDER,
+    RENAME_NOTE_NOT_FOUND,
+    RENAME_NOTE_EXISTS,
+    RENAME_NOTE_SUCCESS,
+    RENAME_NOTE_ERROR,
+    NOTE_APPEND_PREFIX,
+)
 
 def ensure_notes_folder_exists():
     """确保笔记文件夹存在。如不存在则尝试创建；
@@ -68,18 +76,18 @@ def rename_note(old_title: str, new_title: str) -> dict:
     new_file_path = get_note_path(new_title)
 
     if not os.path.exists(old_file_path):
-        return {"status": "error", "message": f"错误：找不到名为 '{old_title}' 的笔记。"}
+        return {"status": "error", "message": RENAME_NOTE_NOT_FOUND.format(old_title=old_title)}
 
     if os.path.exists(new_file_path):
-        return {"status": "error", "message": f"错误：名为 '{new_title}' 的笔记已经存在了，换个新名字吧！"}
+        return {"status": "error", "message": RENAME_NOTE_EXISTS.format(new_title=new_title)}
 
     try:
         os.rename(old_file_path, new_file_path)
         print(f"成功将笔记 '{old_title}' 重命名为 '{new_title}'")
-        return {"status": "success", "message": f"成功将笔记 '{old_title}' 重命名为 '{new_title}'！"}
+        return {"status": "success", "message": RENAME_NOTE_SUCCESS.format(old_title=old_title, new_title=new_title)}
     except Exception as e:
         print(f"重命名文件时发生错误: {e}")
-        return {"status": "error", "message": f"修改笔记名称时发生意外：{e}"}
+        return {"status": "error", "message": RENAME_NOTE_ERROR.format(e=e)}
 
 
 def get_note_content(title: str) -> str | None:
@@ -108,7 +116,7 @@ def append_to_note(title: str, content: str) -> bool:
 
     # 格式化要追加的内容
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-    formatted_content = f"\n\n--- (Nana帮你记在 {timestamp}) ---\n{content}\n"
+    formatted_content = f"\n\n{NOTE_APPEND_PREFIX.format(timestamp=timestamp)}\n{content}\n"
 
     try:
         # 使用 'a' 模式来追加内容，文件不存在会自动创建
