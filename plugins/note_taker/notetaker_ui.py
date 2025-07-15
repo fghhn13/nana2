@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import scrolledtext, messagebox
 from .notetaker_handle import get_note_path, get_note_content
 from Gui.config import gui_config
+from .note_config import EDITOR_WIDTH, EDITOR_HEIGHT
 
 
 def open_note_editor(note_name: str, content: str = "", master_window=None):
@@ -12,8 +13,8 @@ def open_note_editor(note_name: str, content: str = "", master_window=None):
     text_area = scrolledtext.ScrolledText(
         editor_window,
         wrap=tk.WORD,
-        width=80,
-        height=25,
+        width=EDITOR_WIDTH,
+        height=EDITOR_HEIGHT,
         font=(gui_config.GENERAL_FONT_FAMILY, gui_config.GENERAL_FONT_SIZE),
         bg=gui_config.BG_INPUT,
         fg=gui_config.FG_TEXT,

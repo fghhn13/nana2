@@ -1,10 +1,6 @@
 import os
-from Gui.config import gui_config
 from datetime import datetime
-NOTES_FOLDER = "MyNotes"
-
-# Ensure notes directory exists
-NOTES_DIR = gui_config.NOTES_DIR
+from .note_config import NOTES_DIR, NOTES_FOLDER
 
 def ensure_notes_folder_exists():
     """确保笔记文件夹存在。如不存在则尝试创建；
