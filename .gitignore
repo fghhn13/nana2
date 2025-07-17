@@ -18,5 +18,6 @@ env/
 dist/
 build/
 
-nana_2/core/log/*.log
+nana_2/core/log/nana.log
 nana_2.bat
+plugins/exe_starter/app_paths.json
