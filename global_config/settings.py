@@ -46,6 +46,6 @@ APP_VERSION = "2.0.0"
 AUTHOR = "你的名字"
 
 # 聊天窗口中显示的名称
-USER_NAME = "你"
-AI_NAME = "Nana"
-AI_NAME_FRIENDLY = "Nana酱"
+USER_NAME = "Fghn"
+AI_NAME = "Nana_system"
+AI_NAME_FRIENDLY = "Nana"
