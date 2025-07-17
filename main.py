@@ -21,6 +21,7 @@ from Gui.windows.main_window import MainWindow
 from IntentDetector.main_detector import MainDetector
 from CommandExecutor.cmd_main import CommandExecutor
 from core.plugin_system.plugin_manager import PluginManager
+from global_config.settings import USER_NAME, AI_NAME, AI_NAME_FRIENDLY
 
 
 
@@ -60,12 +61,12 @@ class AppController:
 
     def start_app(self):
         """应用启动时，由 main 函数调用。"""
-        welcome_msg = ("Nana", "ready to start!", "nana_sender")
+        welcome_msg = (AI_NAME, "ready to start!", "nana_sender")
         self.view.ui_queue.put(("APPEND_MESSAGE", welcome_msg))
 
     def process_user_input(self, user_text: str):
         """这是从GUI的EventHandler接收用户输入的唯一入口。"""
-        user_msg = ("你", user_text, "user_sender")
+        user_msg = (USER_NAME, user_text, "user_sender")
         self.view.ui_queue.put(("APPEND_MESSAGE", user_msg))
         self.conversation_history.append({"role": "user", "content": user_text})
         thread = threading.Thread(target=self._run_backend_process)
@@ -78,7 +79,7 @@ class AppController:
         command = self.detector.detect_and_parse(self.conversation_history)
         ai_response = command.get("response")
         if ai_response:
-            response_msg = ("Nana酱", ai_response, "nana_sender")
+            response_msg = (AI_NAME_FRIENDLY, ai_response, "nana_sender")
             self.view.ui_queue.put(("APPEND_MESSAGE", response_msg))
             self.conversation_history.append({"role": "assistant", "content": ai_response})
         if command.get("intent") == "needs_clarification":
