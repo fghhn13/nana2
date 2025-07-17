@@ -1,0 +1,38 @@
+{
+  "description": "【桌面便签插件】可以在桌面上创建一个独立的便签小窗口，用来随时记录事情。",
+  "examples": [
+    {
+      "user": "帮我在便签上记下，今天要早点睡觉",
+      "ai": {
+        "plugin": "post_it_note",
+        "command": "add_note",
+        "args": {
+          "content": "今天要早点睡觉"
+        },
+        "response": "好的，帮你记好啦！"
+      }
+    },
+    {
+      "user": "在便签上加一条，明天要买牛奶",
+      "ai": {
+        "plugin": "post_it_note",
+        "command": "add_note",
+        "args": {
+          "content": "明天要买牛奶"
+        },
+        "response": "没问题！已经帮你补充到便签上咯。"
+      }
+    },
+    {
+      "user": "提醒我，下午三点开会",
+      "ai": {
+        "plugin": "post_it_note",
+        "command": "add_note",
+        "args": {
+          "content": "下午三点开会"
+        },
+        "response": "记下了，会议提醒已经写在便签上啦！"
+      }
+    }
+  ]
+}
