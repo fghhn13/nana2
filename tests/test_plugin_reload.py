@@ -28,10 +28,10 @@ class PluginReloadTests(unittest.TestCase):
         controller = DummyController()
         manager = PluginManager(controller)
         # ensure plugin loads
-        self.assertTrue(manager.load_plugin('sample_plugin'))
-        self.assertIn('sample_plugin', manager.plugins)
+        self.assertTrue(manager.load_plugin('test_plugin'))
+        self.assertIn('test_plugin', manager.plugins)
         # reload
-        success, _ = manager.reload_plugin('sample_plugin')
+        success, _ = manager.reload_plugin('test_plugin')
         self.assertTrue(success)
         self.assertTrue(controller.ai_service.called)
         self.assertTrue(controller.command_executor.called)
